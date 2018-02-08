@@ -1,0 +1,14 @@
+{
+    "name": "bebe-au-naturel/rad-framework-orm-doctrine",
+    "description": "Description of project rad-framework-orm-doctrine.",
+    "authors": [
+        {
+            "name": "Guillaume Monet",
+            "email": "guillaume.monet@free.fr"
+        }
+    ],
+    "require": {
+        "rad/rad-framework": "dev-master",
+        "doctrine/orm": "v2.6.0"
+    }
+}

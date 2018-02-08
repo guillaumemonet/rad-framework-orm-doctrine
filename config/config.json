@@ -1,0 +1,19 @@
+{
+    "orm": {
+        "default": "doctrine",
+        "classname": "Rad\\Orm\\OrmInterface",
+        "handlers": {
+            "mcrypt": {
+                "classname": "Rad\\Orm\\DoctrineOrmHandler",
+                "config": {
+                    "dev": true,
+                    "database": "",
+                    "user": "",
+                    "password": "",
+                    "host": "",
+                    "driver": ""
+                }
+            }
+        }
+    }
+}
