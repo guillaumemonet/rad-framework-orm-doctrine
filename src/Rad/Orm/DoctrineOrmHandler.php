@@ -26,18 +26,17 @@
 
 namespace Rad\Orm;
 
-use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\EntityManager;
+use Rad\Config\Config;
 
 final class DoctrineOrmHandler implements OrmInterface {
 
     private $entityManager = null;
 
     public function __construct() {
-        $radConfig = \Rad\Config\Config::getServiceConfig('orm', 'doctrine')->config;
-        $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__ . "/src"), $radConfig->dev);
-        $config = new Configuration();
+        $radConfig = Config::getServiceConfig('orm', 'doctrine')->config;
+        $config = Setup::createAnnotationMetadataConfiguration(array($radConfig->annotationsDir), $radConfig->dev);
         $connectionParams = array(
             'dbname' => $radConfig->database,
             'user' => $radConfig->user,
@@ -46,7 +45,6 @@ final class DoctrineOrmHandler implements OrmInterface {
             'driver' => $radConfig->driver,
         );
         $conn = DriverManager::getConnection($connectionParams, $config);
-
         $this->entityManager = EntityManager::create($conn, $config);
     }
 
