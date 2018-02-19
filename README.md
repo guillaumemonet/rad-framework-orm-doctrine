@@ -1,1 +1,1 @@
-# rad-framework-orm-doctrine
+# RAD Framework Doctrine support
