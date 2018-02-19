@@ -3,7 +3,7 @@
         "default": "doctrine",
         "classname": "Rad\\Orm\\OrmInterface",
         "handlers": {
-            "mcrypt": {
+            "doctrine": {
                 "classname": "Rad\\Orm\\DoctrineOrmHandler",
                 "config": {
                     "dev": true,
