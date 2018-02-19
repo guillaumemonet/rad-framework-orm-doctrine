@@ -7,6 +7,31 @@
             "email": "guillaume.monet@free.fr"
         }
     ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Rad\\": "src/Rad/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "rad/rad-framework-orm-doctrine",
+                "version": "dev-master",
+                "source": {
+                    "url": "git://github.com/guillaumemonet/rad-framework-orm-doctrine.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "Rad\\": "src/Rad/"
+                    }
+                }
+            }
+        }
+    ],
     "require": {
         "rad/rad-framework": "dev-master",
         "doctrine/orm": "v2.6.0"
